@@ -1,44 +1,38 @@
-/* Styles go here */
-
-body {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-}
 .fade {
-    opacity: 1;
-    -webkit-transition: 0.5s linear all;
-    transition: 0.5s linear all;
+  opacity:1;
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
 }
+
 .fade.ng-hide {
-    opacity: 0;
+  	opacity:0;
 }
-.box {
-    color: white;
-    text-align: center;
-    height: 100px;
-    font-size: 86px;
+
+.box { color: white; text-align: center; height: 100px; font-size: 86px; }
+
+.box-show-setup, .box-hide-setup {
+  -webkit-transition:all linear 0.3s;
+  -moz-transition:all linear 0.3s;
+  -ms-transition:all linear 0.3s;
+  -o-transition:all linear 0.3s;
+  transition:all linear 0.3s;
 }
-.box-show-setup,
-.box-hide-setup {
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
-    transition: all linear 0.3s;
-}
-.overlay {
+
+
+.overlay { 
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
     border: 1px solid red;
-    overflow: hidden;
-}
-.panel-setheight {
-    height: 30%;
-    border: 1px solid red;
-    overflow: hidden;
-}
+  }
+  .panel-setheight{
+  	border: 1px solid red;
+  	overflow: hidden;
+  }
+  .well-properties{
+    height: 20px;
+    margin-bottom: 0px !important;
+    min-height: 20px;
+    max-height: 20px;
+  }
