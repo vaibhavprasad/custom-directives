@@ -34,7 +34,7 @@ app.directive('paneldiv', function(){
 			//here "elem" contains the panelTemplate.html's contents
 
 			scope.hidePanel = false;		// variable controlling show and hide of the panel contents
-			scope.maxSize = false;			// variable to resize panes i.e switch between height 30% and 100%
+			scope.maxSize = false;
 
 			scope.reloadPanel = function(){
 				alert("reloadPanel clicked");
@@ -43,17 +43,22 @@ app.directive('paneldiv', function(){
 			scope.maximizePanel = function() {
 				
 				scope.hidePanel = false;
+
 			};
 
 			scope.minimizePanel = function() {
 				
 				scope.hidePanel = true;
+				scope.maxSize = false;
+
 			};
 			scope.resizePanel = function() {
 				
 				scope.maxSize = !scope.maxSize;
-				//window.scrollTo(0, elem[0].offsetTop - 100);
-				//window.scroll(0,elem[0].offsetTop + 500);
+				scope.hidePanel = false;
+				setTimeout(function () {
+        				window.scrollTo(0, elem[0].offsetTop)		// scroll to the maximized directive
+      				}, 0);
 			};
 		}
 	}
